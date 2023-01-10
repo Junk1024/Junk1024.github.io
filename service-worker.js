@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "69de5534b084c2d3980349b397ed695f"
+    "revision": "50f1eab80ba5e6aef3ec9b6b601abc84"
   },
   {
     "url": "assets/css/0.styles.66f08aaf.css",
@@ -50,8 +50,8 @@ self.__precacheManifest = [
     "revision": "97a2c3c6873116def19654360bd66be8"
   },
   {
-    "url": "assets/js/10.a6a52a87.js",
-    "revision": "6586ddca310780e184336409ed8c5093"
+    "url": "assets/js/10.b192308e.js",
+    "revision": "48f75f890bac97aca0b54df50e42140e"
   },
   {
     "url": "assets/js/11.73a0d9b9.js",
@@ -66,8 +66,12 @@ self.__precacheManifest = [
     "revision": "27ca578911927f48bedd448bd30b6c45"
   },
   {
-    "url": "assets/js/14.f0da74d2.js",
-    "revision": "3a3192f7f780e727742f6052d37def09"
+    "url": "assets/js/14.461d2fb7.js",
+    "revision": "d1d9e1d77b66a88e7a4e61ce33e9fb96"
+  },
+  {
+    "url": "assets/js/15.13cf773b.js",
+    "revision": "dde987b3869620a0f719ecf4ba628a3f"
   },
   {
     "url": "assets/js/3.bef78585.js",
@@ -98,8 +102,8 @@ self.__precacheManifest = [
     "revision": "96cd36b481b785bfcd2774540b43d336"
   },
   {
-    "url": "assets/js/app.954847dd.js",
-    "revision": "40c91e2c348dae9c7cfac15a556d785e"
+    "url": "assets/js/app.543e0c24.js",
+    "revision": "7e78446eeb2f6aa933d1737b38b8972d"
   },
   {
     "url": "author.jpg",
@@ -111,15 +115,23 @@ self.__precacheManifest = [
   },
   {
     "url": "categories/index.html",
-    "revision": "0b7417d709109310d85c3da95bc4d984"
+    "revision": "5d96c3dc07189aa5464189b235e47680"
   },
   {
     "url": "categories/工具/index.html",
-    "revision": "65f38bcbdba6c009601fbe8d4730eaef"
+    "revision": "24933e29842ba9013df0796db227a8e7"
   },
   {
     "url": "categories/教程/index.html",
-    "revision": "e3a9719f5b2a591bc4276b7daf107bfc"
+    "revision": "2c44189b668bfdf736f44322cc9e29c6"
+  },
+  {
+    "url": "categories/笔记/index.html",
+    "revision": "88f0ec85a9bee3c0da330f89be57dc94"
+  },
+  {
+    "url": "ES6-github-pages.html",
+    "revision": "cdaca64a25e69d5bed8a60340557a148"
   },
   {
     "url": "favicon.jpg",
@@ -127,7 +139,7 @@ self.__precacheManifest = [
   },
   {
     "url": "git-skills-pages.html",
-    "revision": "4ddf1312df0920ccd661b7a2a8456063"
+    "revision": "eabacf16299057b04e23e2e220d28534"
   },
   {
     "url": "head.jpg",
@@ -135,23 +147,23 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "8fcbb9ed394256a6226126db6f854ab3"
+    "revision": "0d9afe6757e4ec8481f7ebfb59e0b947"
   },
   {
     "url": "tag/index.html",
-    "revision": "21f17d663d532f5877f0f6372500f571"
+    "revision": "c1703e7dfee059c7838290f876cb1a8d"
   },
   {
     "url": "tag/博客/index.html",
-    "revision": "adfe181b9de3f96664679a77d9d356aa"
+    "revision": "84dbe99936219b3298f80baa3defc12d"
   },
   {
     "url": "timeline/index.html",
-    "revision": "b0587442831d3b511816e7dac554c527"
+    "revision": "fd259c639029a8e5076c25430fe4020b"
   },
   {
     "url": "vuepress-github-pages.html",
-    "revision": "0e11fd3b83948c83bd5576895dda7e32"
+    "revision": "bfa0936a6453d9f2ee6475017d980d95"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
