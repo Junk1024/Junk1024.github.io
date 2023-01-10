@@ -34,5 +34,5 @@ module.exports = {
   record: '是yi不是qi',
   recordLink: '',
   // 项目开始时间
-  startYear: '2022-2023'
+  startYear: '2022'
 }
