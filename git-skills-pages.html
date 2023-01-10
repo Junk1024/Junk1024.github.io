@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Git的基本使用 | wy&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.8">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icon_vuepress_reco.png">
+    <link rel="mask-icon" href="/icon_vuepress_reco.svg" color="#42b983">
+    <meta name="description" content="为什么要编写这个教程？因为我在学习 Git 的过程中，在网上找了一堆 Git 相关的文章和教程，感觉都有点差强人意，那就自己写一个自己能看的懂的记录下来，方便以后自己在使用过程出现遗忘问题时能快速找到解决方案。
+首先，本教程绝对面向初学者，没有接触过版本控制概念的读者也可以轻松入门，不必担心起步难度，因为我就是初学者！
+其次，本教程出自一个初学者，难免会有不恰当的地方，如果您有幸看到我的这篇文章并发现了问题，欢迎您留言指出。">
+    <meta name="twitter:title" content="Git的基本使用">
+    <meta name="twitter:description" content="为什么要编写这个教程？因为我在学习 Git 的过程中，在网上找了一堆 Git 相关的文章和教程，感觉都有点差强人意，那就自己写一个自己能看的懂的记录下来，方便以后自己在使用过程出现遗忘问题时能快速找到解决方案。
+首先，本教程绝对面向初学者，没有接触过版本控制概念的读者也可以轻松入门，不必担心起步难度，因为我就是初学者！
+其次，本教程出自一个初学者，难免会有不恰当的地方，如果您有幸看到我的这篇文章并发现了问题，欢迎您留言指出。">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://junk1024.github.io/blogs/2022/git-skills.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="Git的基本使用">
+    <meta property="og:description" content="为什么要编写这个教程？因为我在学习 Git 的过程中，在网上找了一堆 Git 相关的文章和教程，感觉都有点差强人意，那就自己写一个自己能看的懂的记录下来，方便以后自己在使用过程出现遗忘问题时能快速找到解决方案。
+首先，本教程绝对面向初学者，没有接触过版本控制概念的读者也可以轻松入门，不必担心起步难度，因为我就是初学者！
+其次，本教程出自一个初学者，难免会有不恰当的地方，如果您有幸看到我的这篇文章并发现了问题，欢迎您留言指出。">
+    <meta property="og:url" content="https://junk1024.github.io/blogs/2022/git-skills.html">
+    <meta property="og:site_name" content="wy">
+    <meta property="article:published_time" content="2022-12-17T18:00:00.000Z">
+    <meta property="article:tag" content="博客">
+    <meta itemprop="name" content="Git的基本使用">
+    <meta itemprop="description" content="为什么要编写这个教程？因为我在学习 Git 的过程中，在网上找了一堆 Git 相关的文章和教程，感觉都有点差强人意，那就自己写一个自己能看的懂的记录下来，方便以后自己在使用过程出现遗忘问题时能快速找到解决方案。
+首先，本教程绝对面向初学者，没有接触过版本控制概念的读者也可以轻松入门，不必担心起步难度，因为我就是初学者！
+其次，本教程出自一个初学者，难免会有不恰当的地方，如果您有幸看到我的这篇文章并发现了问题，欢迎您留言指出。">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="theme-color" content="#42b983">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icon_vuepress_reco.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.66f08aaf.css" as="style"><link rel="preload" href="/assets/js/app.954847dd.js" as="script"><link rel="preload" href="/assets/js/3.bef78585.js" as="script"><link rel="preload" href="/assets/js/1.8e6bf94f.js" as="script"><link rel="preload" href="/assets/js/12.3a1c7468.js" as="script"><link rel="preload" href="/assets/js/9.7833e792.js" as="script"><link rel="prefetch" href="/assets/js/10.a6a52a87.js"><link rel="prefetch" href="/assets/js/11.73a0d9b9.js"><link rel="prefetch" href="/assets/js/13.21f1f8fc.js"><link rel="prefetch" href="/assets/js/14.f0da74d2.js"><link rel="prefetch" href="/assets/js/4.18af3eff.js"><link rel="prefetch" href="/assets/js/5.f7f13f8d.js"><link rel="prefetch" href="/assets/js/6.d20b85ca.js"><link rel="prefetch" href="/assets/js/7.ed13d24c.js"><link rel="prefetch" href="/assets/js/8.e39776a9.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.66f08aaf.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>wy's blog</h3> <p class="description" data-v-59e6cb88>舞台再大，不上台永远是观众；能力再大，不行动只能看别人成功</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>wy</span>
+          
+        <span data-v-59e6cb88>2022-2023 - </span>
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/favicon.jpg" alt="wy's blog" class="logo"> <span class="site-name">wy's blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/教程/" class="nav-link"><i class="undefined"></i>
+  教程
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/junk1024" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://me.csdn.net/blog/Jeason666666" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-csdn"></i>
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/author.jpg" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
+    wy
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>2</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>1</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/教程/" class="nav-link"><i class="undefined"></i>
+  教程
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/junk1024" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://me.csdn.net/blog/Jeason666666" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-csdn"></i>
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>Git的基本使用</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>wy</span>
+          
+        <span data-v-59e6cb88>2022-2023 - </span>
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">Git的基本使用</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>wy</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>12/17/2022</span></i> <i class="iconfont reco-eye" data-v-8a445198><span id="/git-skills-pages.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-8a445198><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>博客</span></i></div></div> <div class="theme-reco-content content__default"><p>为什么要编写这个教程？因为我在学习 Git 的过程中，在网上找了一堆 Git 相关的文章和教程，感觉都有点差强人意，那就自己写一个自己能看的懂的记录下来，方便以后自己在使用过程出现遗忘问题时能快速找到解决方案。
+首先，本教程绝对面向初学者，没有接触过版本控制概念的读者也可以轻松入门，不必担心起步难度，因为我就是初学者！
+其次，本教程出自一个初学者，难免会有不恰当的地方，如果您有幸看到我的这篇文章并发现了问题，欢迎您留言指出。</p> <h2 id="git-简介"><a href="#git-简介" class="header-anchor">#</a> Git 简介</h2> <p>Git 是什么？Git 是目前世界上最先进的分布式版本控制系统。</p> <p>说到这里就不得不提分布式版本控制系统。先说集中式版本控制系统，版本库是集中存放在中央服务器的，而干活的时候，用的都是自己的电脑，所以要先从中央服务器取得最新的版本，然后开始干活，干完活了，再把自己的活推送给中央服务器。中央服务器就好比是一个图书馆，你要改一本书，必须先从图书馆借出来，然后回到家自己改，改完了，再放回图书馆。</p> <p>那分布式版本控制系统与集中式版本控制系统有何不同呢？首先，分布式版本控制系统根本没有“中央服务器”，每个人的电脑上都是一个完整
+的版本库，这样，你工作的时候，就不需要联网了，因为版本库就在你自己的电脑上。既然每个人电脑上都有一个完整的版本库，那多个人如
+何协作呢？比方说你在自己电脑上改了文件 A，你的同事也在他的电脑上改了文件 A，这时，你们俩之间只需把各自的修改推送给对方，就
+可以互相看到对方的修改了。</p> <p>和集中式版本控制系统相比，分布式版本控制系统的安全性要高很多，因为每个人电脑里都有完整的版本库，某一个人的电脑坏掉了不要紧，
+随便从其他人那里复制一个就可以了。而集中式版本控制系统的中央服务器要是出了问题，所有人都没法干活了。当然，Git 的优势不单是
+不必联网这么简单，后面我们还会看到 Git 极其强大的分支管理。</p> <h2 id="git-安装"><a href="#git-安装" class="header-anchor">#</a> Git 安装</h2> <p>安装直接到<a href="https://git-scm.com/downloads" target="_blank" rel="noopener noreferrer">官网<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>下载对应的版本就行。基本不会有什么问题，这篇文章着重于使用和理解。也可以
+参考这个<a href="https://www.runoob.com/git/git-install-setup.html" target="_blank" rel="noopener noreferrer">教程<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>windows 安装完成之后在任一目录下右键查看是否有 Git
+Bash Here，若有则证明安装成功，以后的命令都可以在 Git Bash Here 里面运行。</p> <h2 id="版本库"><a href="#版本库" class="header-anchor">#</a> 版本库</h2> <p>什么是版本库呢？版本库又名仓库，英文名 repository，你可以简单理解成一个目录，这个目录里面的所有文件都可以被 Git 管理起来，每
+个文件的修改、删除，Git 都能跟踪，以便任何时刻都可以追踪历史，或者在将来某个时刻可以“还原”。
+首先你要学会创建一个本地仓库，你可以在命令行新建一个文件夹(learngit)，然后进入进行管理。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>mkdir learngit
+cd learngit
+git init
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>git init 命令把这个目录变成 Git 可以管理的仓库。瞬间 Git 就把仓库建好了，而且告诉你是一个空的仓库（empty repository）
+，然后你可以发现当前目录下多了一个.git 的目录，这个目录是 Git 来跟踪管理版本库的，没事千万不要手动修改这个目录里面的文件，
+不然改乱了，就把 Git 仓库给破坏了。</p> <p>接下来你需要明白工作区、暂存区、版本库。工作区就是你创建的目录里面所能看到的(不包括.git)，暂存区和版本库相对来说是不可见
+的，这个说法只是便于理解，其实他们在自动生成的.git 文件夹里面会有相应的操作记录。</p> <h3 id="文件的添加和删除"><a href="#文件的添加和删除" class="header-anchor">#</a> 文件的添加和删除</h3> <p>刚开始仓库是空的，然后你在工作区写了一个 a.txt 文件，此时这个文件只存在于你的工作区，那么如何将它添加到你的版本库里面呢？首
+先需要将 a.txt 文件添加到缓存区,然后提交到版本库</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git add a.txt
+git commit -m '添加了a.txt文件'
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>其中 add 后可跟目录名和文件名，如果要添加工作区的所有文件，也可以添加工作区的所有文件，对应代码如下</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git add 目录名
+git add 文件名
+git add .
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br></div></div><p>当然也可以一次添加多个指定的文件，用空格隔开就行。删除文件同理，只需将 add 替换为 rm 即可。对于工作区的文件，如果不确定其状
+态，可以通过下面代码来查看其状态</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git status
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>然后我们分析一下各种情况。当你刚执行完 commit 操作，暂存区是空的时，输入命令会提示你 working tree clean；当你修改了工作区
+的文件之后再使用 status 命令则会显示文件已修改，并提醒你提交到版本库；当你新增了文件的时候，会提醒你工作区有未追踪的文件，
+然后提醒你将新文件提交到版本库；当你删除了文件，会提醒你工作区有文件被删除，并提示你更新到版本库。</p> <h3 id="错误修改的补救"><a href="#错误修改的补救" class="header-anchor">#</a> 错误修改的补救</h3> <p>当然我们不可避免的会有错误的修改，当我们对 a.txt 文件进行了一次错误的修改，怎么撤回修改呢，具体情况有以下三种：</p> <p>① 只在工作区做了修改，还未添加至缓存区，此时可以使用下面这个命令将工作区回到最近一次 add 或者 commit 的状态。(工作区误删恢复也可
+以用这个命令)</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git checkout -- a.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>② 你做了错误的修改并且已经提交到了缓存区，需要先撤销暂存区的修改，然后就回到了第一种情况。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git reset HEAD a.txt
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>③ 如果你已经进行了 commit 提交，那么你只需回退到上一个版本库即可，版本回退下面会细讲。</p> <h3 id="版本管理"><a href="#版本管理" class="header-anchor">#</a> 版本管理</h3> <p>对版本库的历史版本管理，使用以下命令查看提交记录。然后会由近到远以此显示你的提交记录，然后通过给出的 commit id 回到指定版
+本，当然也有另一种指令，快捷的回退到前 n 个版本，其中 n 与^的数量相对应。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git log
+git reset --hard  57aa6817806ad984484
+//回退到commit id 为57aa6817806ad984484的版本
+git reset --hard HEAD^
+//回退到上一个版本
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>然后你的工作区和版本库就会是你想要的版本。commit id 不用写全只要写到唯一位就行。如果觉得 git log 显示的信息太繁琐，可以加
+上参数 --pretty=oneline 只会显示版本号和提交时的备注信息，这样阅读起来更友好得多。这时又有一个问题，假设你有按顺序的三个版
+本 a，b，c，你从 c 版本回到了 b 版本，你在使用 git log 命令会不显示你的 c 版本的 commit，这是你如果想要再次回到 c 版本，
+应该怎么做呢？这是需要用到下面这个命令，就可以看到 commit id 了，然后再执行回退命令就可以了。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git reflog
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br></div></div><p>这里我们就能看出两者的区别，查过资料得到证实，git log 命令可以显示当前分支所有提交过的版本信息，不包括已经被删除的 commit
+记录和 reset 的操作。(注意: 只是当前分支操作的信息)。git reflog 命令可以查看所有分支的所有操作记录信息（包括已经被删除的
+commit 记录和 reset 的操作）。</p> <p>总结一下:
+Git 允许我们在版本的历史之间穿梭，使用命令 git reset --hard commit_id。
+穿梭前，用 git log 可以查看提交历史，以便确定要回退到哪个版本。
+要重返未来，用 git reflog 查看命令历史，以便确定要回到未来的哪个版本。</p> <h2 id="分支"><a href="#分支" class="header-anchor">#</a> 分支</h2> <p>分支就是科幻电影里面的平行宇宙，当你正在电脑前努力学习前端的时候，另一个你正在另一个平行宇宙里努力学习后端。
+如果两个平行宇宙互不干扰，那对现在的你也没啥影响。不过，在某个时间点，两个平行宇宙合并了，结果，你就成了全栈工程师。
+分支在实际中有什么用呢？假设你准备开发一个新功能，但是需要两周才能完成，第一周你写了 50%的代码，如果立刻提交，由于代码还没写完，不完整的代码库会导致别人不能干活了。如果等代码全部写完再一次提交，又存在丢失每天进度的巨大风险。
+现在有了分支，就不用怕了。你创建了一个属于你自己的分支，别人看不到，还继续在原来的分支上正常工作，而你在自己的分支上干活，想提交就提交，直到开发完毕后，再一次性合并到原来的分支上，这样，既安全，又不影响别人工作。</p> <p>在版本回退里，我们已经知道，每次提交，Git 都把它们串成一条时间线，这条时间线就是一个分支。截止到目前，只有一条时间线，在 Git
+里，这个分支叫主分支，即 master 分支(从 2020 年 10 月 1 日开始，Github 将所有“master 分支”一律改名为“main 分支”，注意识别)。HEAD 严
+格来说不是指向提交，而是指向 master，master 才是指向提交的，所以，HEAD 指向的就是当前分支。</p> <p>一开始的时候，master 分支是一条线，Git 用 master 指向最新的提交，再用 HEAD 指向 master，就能确定当前分支，以及当前分支的提交点。
+每次提交，master 分支都会向前移动一步，这样，随着你不断提交，master 分支的线也越来越长。当我们创建新的分支，例如 dev 时，Git 新
+建了一个指针叫 dev，指向 master 相同的提交，再把 HEAD 指向 dev，就表示当前分支在 dev 上。Git 创建一个分支很快，因为除了增加一个 dev
+指针，改改 HEAD 的指向，工作区的文件都没有任何变化！不过，从现在开始，对工作区的修改和提交就是针对 dev 分支了，比如新提交一次
+后，dev 指针往前移动一步，而 master 指针不变。</p> <p>假如我们在 dev 上的工作完成了，就可以把 dev 合并到 master 上。合并完分支后，甚至可以删除 dev 分支。删除 dev 分支就是把 dev 指针给删
+掉，删掉后，我们就剩下了一条 master 分支。</p> <h3 id="分支的创建、切换与合并"><a href="#分支的创建、切换与合并" class="header-anchor">#</a> 分支的创建、切换与合并</h3> <p>首先，我们创建 dev 分支，然后切换到 dev 分支，其实这个代码相当于两行代码，先创建再切换分支。其中，git checkout 命令我们在前面
+的恢复文件时也用到了，为了作区分，建议使用 switch 进行分支的切换。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git checkout -b dev
+git switch -c dev
+//等同于下面两行代码
+git branch dev
+git checkout dev
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><p>然后，用 git branch 命令查看分支</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git branch
+//当前分支前面会有一个*
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br></div></div><p>切换到 dev 分支以后我们就可以在 dev 分支上正常提交，等到提交之后，再回到 master 合并 dev，然后就可以删掉 dev 分支了。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git merge dev
+//在master分支上合并dev
+git branch -d dev
+//删除dev分支
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br></div></div><h3 id="合并冲突的解决"><a href="#合并冲突的解决" class="header-anchor">#</a> 合并冲突的解决</h3> <p>当 Git 无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。解决冲突就是把 Git 合并失败的文件手动编辑为我们希望的内容，再提交。</p> <h3 id="恢复误删的分支"><a href="#恢复误删的分支" class="header-anchor">#</a> 恢复误删的分支</h3> <p>如果你在分支上做了提交并且没有合并到主分支上就被你删了，可以先找到 commit id，然后恢复误删的分支。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git log -g
+//找到误删分支上的commit id
+git branch newbranch commit id
+//恢复分支
+git switch newbranch
+//切换到恢复的分支
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><h2 id="远程仓库"><a href="#远程仓库" class="header-anchor">#</a> 远程仓库</h2> <p>下载完 Git，安装教程里面有配置的教程，配置完成之后可以通过命令查看绑定的远程仓库，可以删除绑定，添加绑定。</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>git remote -v
+//查看绑定的远程仓库信息，没有绑定就是空白，有绑定会显示名字
+git remote add 仓库地址
+//绑定远程仓库
+git remote rm origin
+//删除绑定的远程仓库，origin为远程仓库名，远程仓库名在本地的名称默认都为origin
+git clone 仓库地址
+//从远程仓库克隆项目
+git push origin master
+//将本地master分支推向远程仓库，注意Github现在将默认分支master改为了main
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">1/10/2023, 12:17:58 PM</span></div></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/git-skills-pages.html#git-简介" class="sidebar-link reco-side-git-简介" data-v-b57cc07c>Git 简介</a></li><li class="level-2" data-v-b57cc07c><a href="/git-skills-pages.html#git-安装" class="sidebar-link reco-side-git-安装" data-v-b57cc07c>Git 安装</a></li><li class="level-2" data-v-b57cc07c><a href="/git-skills-pages.html#版本库" class="sidebar-link reco-side-版本库" data-v-b57cc07c>版本库</a></li><li class="level-3" data-v-b57cc07c><a href="/git-skills-pages.html#文件的添加和删除" class="sidebar-link reco-side-文件的添加和删除" data-v-b57cc07c>文件的添加和删除</a></li><li class="level-3" data-v-b57cc07c><a href="/git-skills-pages.html#错误修改的补救" class="sidebar-link reco-side-错误修改的补救" data-v-b57cc07c>错误修改的补救</a></li><li class="level-3" data-v-b57cc07c><a href="/git-skills-pages.html#版本管理" class="sidebar-link reco-side-版本管理" data-v-b57cc07c>版本管理</a></li><li class="level-2" data-v-b57cc07c><a href="/git-skills-pages.html#分支" class="sidebar-link reco-side-分支" data-v-b57cc07c>分支</a></li><li class="level-3" data-v-b57cc07c><a href="/git-skills-pages.html#分支的创建、切换与合并" class="sidebar-link reco-side-分支的创建、切换与合并" data-v-b57cc07c>分支的创建、切换与合并</a></li><li class="level-3" data-v-b57cc07c><a href="/git-skills-pages.html#合并冲突的解决" class="sidebar-link reco-side-合并冲突的解决" data-v-b57cc07c>合并冲突的解决</a></li><li class="level-3" data-v-b57cc07c><a href="/git-skills-pages.html#恢复误删的分支" class="sidebar-link reco-side-恢复误删的分支" data-v-b57cc07c>恢复误删的分支</a></li><li class="level-2" data-v-b57cc07c><a href="/git-skills-pages.html#远程仓库" class="sidebar-link reco-side-远程仓库" data-v-b57cc07c>远程仓库</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><!----></div></div>
+    <script src="/assets/js/app.954847dd.js" defer></script><script src="/assets/js/3.bef78585.js" defer></script><script src="/assets/js/1.8e6bf94f.js" defer></script><script src="/assets/js/12.3a1c7468.js" defer></script><script src="/assets/js/9.7833e792.js" defer></script>
+  </body>
+</html>
