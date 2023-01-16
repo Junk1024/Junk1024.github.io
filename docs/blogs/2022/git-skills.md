@@ -204,7 +204,7 @@ git switch newbranch
 ```
 git remote -v
 //查看绑定的远程仓库信息，没有绑定就是空白，有绑定会显示名字
-git remote add 仓库地址
+git remote add origin 仓库地址
 //绑定远程仓库
 git remote rm origin
 //删除绑定的远程仓库，origin为远程仓库名，远程仓库名在本地的名称默认都为origin
@@ -212,4 +212,10 @@ git clone 仓库地址
 //从远程仓库克隆项目
 git push origin master
 //将本地master分支推向远程仓库，注意Github现在将默认分支master改为了main
+```
+
+当远程仓库有多个分支，克隆制定分支到本地
+
+```
+git clone -b 分支名 仓库地址
 ```
