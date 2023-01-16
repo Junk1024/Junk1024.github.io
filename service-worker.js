@@ -27,7 +27,7 @@ self.addEventListener('message', (event) => {
 self.__precacheManifest = [
   {
     "url": "404.html",
-    "revision": "a04909906bf08dc0bd69855eba538651"
+    "revision": "93c5a69ee3ee25933d5ee39a4871ff24"
   },
   {
     "url": "assets/css/0.styles.66f08aaf.css",
@@ -58,8 +58,8 @@ self.__precacheManifest = [
     "revision": "0aacff27bdc4a0f98beb46dd2f275eee"
   },
   {
-    "url": "assets/js/12.3a1c7468.js",
-    "revision": "91db47bf24b151025047dfdcc711af94"
+    "url": "assets/js/12.dd52c1ce.js",
+    "revision": "82821993ffe7de61e88e833f0dad45da"
   },
   {
     "url": "assets/js/13.21f1f8fc.js",
@@ -102,8 +102,8 @@ self.__precacheManifest = [
     "revision": "96cd36b481b785bfcd2774540b43d336"
   },
   {
-    "url": "assets/js/app.91099fba.js",
-    "revision": "75415edadd44f72e30498be4e7b51eda"
+    "url": "assets/js/app.a1ec7e64.js",
+    "revision": "6ec95ae763f920d7e725a8f3912c77c3"
   },
   {
     "url": "author.jpg",
@@ -115,23 +115,23 @@ self.__precacheManifest = [
   },
   {
     "url": "categories/index.html",
-    "revision": "137bbe29c367315cb36e42c266378e24"
+    "revision": "9c456a38065cca5397360dbe9124677f"
   },
   {
     "url": "categories/工具/index.html",
-    "revision": "24ad697d324152af34da4c4a479209cc"
+    "revision": "7fe6a62cb358bda38c4a5254f6be4ab6"
   },
   {
     "url": "categories/教程/index.html",
-    "revision": "024688954765153fef8daa89f9c5534c"
+    "revision": "42f99f1fcfc91d794a3afb6b05070c8c"
   },
   {
     "url": "categories/笔记/index.html",
-    "revision": "5098f8915cc169f1bbce27b0a5f41bab"
+    "revision": "8524b8dc32634bed0ad47d639185f6fc"
   },
   {
     "url": "ES6-github-pages.html",
-    "revision": "e97ab21289a8ee1ded165342356d6870"
+    "revision": "1a3bd1a11eba42efdcae7c02118c6a5e"
   },
   {
     "url": "favicon.jpg",
@@ -139,7 +139,7 @@ self.__precacheManifest = [
   },
   {
     "url": "git-skills-pages.html",
-    "revision": "babd21689b02957bfdb80819a8251d55"
+    "revision": "262aadff70bc9f812d49d20f6ce5b12f"
   },
   {
     "url": "head.jpg",
@@ -147,23 +147,23 @@ self.__precacheManifest = [
   },
   {
     "url": "index.html",
-    "revision": "4896f9fdb3a3ce925d7d3d252c3eb5ac"
+    "revision": "cb3bdd01fcb9d6034eec78ffa958083d"
   },
   {
     "url": "tag/index.html",
-    "revision": "bfe2cd7df75daacbe5fae7059243e810"
+    "revision": "351fa2a2ae6a03f52913f9bf33b5ad0b"
   },
   {
     "url": "tag/博客/index.html",
-    "revision": "7328677ae3269c4e4d901fdef071e4ac"
+    "revision": "e0317caa6c239d0ae56d8c6d57cb67e3"
   },
   {
     "url": "timeline/index.html",
-    "revision": "f27d8438f0390973ad9e4f63e6dc23ca"
+    "revision": "fc1857e1cb420a73da5221546879f0c9"
   },
   {
     "url": "vuepress-github-pages.html",
-    "revision": "d892d7d294621ed1c38b99c6f42c4dae"
+    "revision": "4dd1c8033420b4ea7d6b66d88ddf5899"
   }
 ].concat(self.__precacheManifest || []);
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
