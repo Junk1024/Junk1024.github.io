@@ -16,7 +16,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          persist-credentials: false
+          node-version: 16
 
       # 1、生成静态文件
       - name: Build
