@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>面试题JS(一) | wy&#39;s blog</title>
+    <meta name="generator" content="VuePress 1.9.9">
+    <link rel="icon" href="/favicon.ico">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="apple-touch-icon" href="/icon_vuepress_reco.png">
+    <link rel="mask-icon" href="/icon_vuepress_reco.svg" color="#42b983">
+    <meta name="description" content="toString.call(()=&gt;{})       // [object Function]
+toString.call({})           // [object Object]
+toString.call([])           // [object Array]
+toString.call(&#39;&#39;)           // [object String]
+toString.call(22)           // [object Number]
+toString.call(undefined)    // [object undefined]
+toString.call(null)         // [object null]
+toString.call(new Date)     // [object Date]
+toString.call(Math)         // [object Math]
+toString.call(window)       // [object Window]
+`">
+    <meta name="twitter:title" content="面试题JS(一)">
+    <meta name="twitter:description" content="toString.call(()=&gt;{})       // [object Function]
+toString.call({})           // [object Object]
+toString.call([])           // [object Array]
+toString.call(&#39;&#39;)           // [object String]
+toString.call(22)           // [object Number]
+toString.call(undefined)    // [object undefined]
+toString.call(null)         // [object null]
+toString.call(new Date)     // [object Date]
+toString.call(Math)         // [object Math]
+toString.call(window)       // [object Window]
+`">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:url" content="https://junk1024.github.io/blogs/2023/interview.html">
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="面试题JS(一)">
+    <meta property="og:description" content="toString.call(()=&gt;{})       // [object Function]
+toString.call({})           // [object Object]
+toString.call([])           // [object Array]
+toString.call(&#39;&#39;)           // [object String]
+toString.call(22)           // [object Number]
+toString.call(undefined)    // [object undefined]
+toString.call(null)         // [object null]
+toString.call(new Date)     // [object Date]
+toString.call(Math)         // [object Math]
+toString.call(window)       // [object Window]
+`">
+    <meta property="og:url" content="https://junk1024.github.io/blogs/2023/interview.html">
+    <meta property="og:site_name" content="wy">
+    <meta property="article:published_time" content="2023-02-19T18:00:00.000Z">
+    <meta property="article:tag" content="博客">
+    <meta itemprop="name" content="面试题JS(一)">
+    <meta itemprop="description" content="toString.call(()=&gt;{})       // [object Function]
+toString.call({})           // [object Object]
+toString.call([])           // [object Array]
+toString.call(&#39;&#39;)           // [object String]
+toString.call(22)           // [object Number]
+toString.call(undefined)    // [object undefined]
+toString.call(null)         // [object null]
+toString.call(new Date)     // [object Date]
+toString.call(Math)         // [object Math]
+toString.call(window)       // [object Window]
+`">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
+    <meta name="theme-color" content="#42b983">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="msapplication-TileImage" content="/icon_vuepress_reco.png">
+    <meta name="msapplication-TileColor" content="#000000">
+    
+    <link rel="preload" href="/assets/css/0.styles.f4269fec.css" as="style"><link rel="preload" href="/assets/js/app.15f16927.js" as="script"><link rel="preload" href="/assets/js/3.d8cb7a9a.js" as="script"><link rel="preload" href="/assets/js/1.ad76be21.js" as="script"><link rel="preload" href="/assets/js/15.a1509fdc.js" as="script"><link rel="preload" href="/assets/js/9.c6a63828.js" as="script"><link rel="prefetch" href="/assets/js/10.cae70dc8.js"><link rel="prefetch" href="/assets/js/11.45a662c5.js"><link rel="prefetch" href="/assets/js/12.df604bd8.js"><link rel="prefetch" href="/assets/js/13.52c09223.js"><link rel="prefetch" href="/assets/js/14.54e1966f.js"><link rel="prefetch" href="/assets/js/16.4b97a538.js"><link rel="prefetch" href="/assets/js/4.d4155b21.js"><link rel="prefetch" href="/assets/js/5.6bd0a7a2.js"><link rel="prefetch" href="/assets/js/6.d79cf2a3.js"><link rel="prefetch" href="/assets/js/7.567dc37d.js"><link rel="prefetch" href="/assets/js/8.b66490ea.js">
+    <link rel="stylesheet" href="/assets/css/0.styles.f4269fec.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container no-sidebar" data-v-7dd95ae2><div data-v-7dd95ae2><div class="password-shadow password-wrapper-out" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>wy's blog</h3> <p class="description" data-v-59e6cb88>舞台再大，不上台永远是观众；能力再大，不行动只能看别人成功</p> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>wy</span>
+          
+        <span data-v-59e6cb88>2022 - </span>
+        2023
+      </a></span></div></div> <div class="hide" data-v-7dd95ae2><header class="navbar" data-v-7dd95ae2><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/" class="home-link router-link-active"><img src="/favicon.jpg" alt="wy's blog" class="logo"> <span class="site-name">wy's blog</span></a> <div class="links"><div class="color-picker"><a class="color-button"><i class="iconfont reco-color"></i></a> <div class="color-picker-menu" style="display:none;"><div class="mode-options"><h4 class="title">Choose mode</h4> <ul class="color-mode-options"><li class="dark">dark</li><li class="auto active">auto</li><li class="light">light</li></ul></div></div></div> <div class="search-box"><i class="iconfont reco-search"></i> <input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <nav class="nav-links can-hide"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/教程/" class="nav-link"><i class="undefined"></i>
+  教程
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/笔记/" class="nav-link"><i class="undefined"></i>
+  笔记
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/junk1024" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://me.csdn.net/blog/Jeason666666" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-csdn"></i>
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav></div></header> <div class="sidebar-mask" data-v-7dd95ae2></div> <aside class="sidebar" data-v-7dd95ae2><div class="personal-info-wrapper" data-v-1fad0c41 data-v-7dd95ae2><img src="/author.jpg" alt="author-avatar" class="personal-img" data-v-1fad0c41> <h3 class="name" data-v-1fad0c41>
+    wy
+  </h3> <div class="num" data-v-1fad0c41><div data-v-1fad0c41><h3 data-v-1fad0c41>4</h3> <h6 data-v-1fad0c41>Articles</h6></div> <div data-v-1fad0c41><h3 data-v-1fad0c41>1</h3> <h6 data-v-1fad0c41>Tags</h6></div></div> <ul class="social-links" data-v-1fad0c41></ul> <hr data-v-1fad0c41></div> <nav class="nav-links"><div class="nav-item"><a href="/" class="nav-link"><i class="iconfont reco-home"></i>
+  Home
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-category"></i>
+      Category
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="/categories/教程/" class="nav-link"><i class="undefined"></i>
+  教程
+</a></li><li class="dropdown-item"><!----> <a href="/categories/工具/" class="nav-link"><i class="undefined"></i>
+  工具
+</a></li><li class="dropdown-item"><!----> <a href="/categories/笔记/" class="nav-link"><i class="undefined"></i>
+  笔记
+</a></li></ul></div></div><div class="nav-item"><a href="/tag/" class="nav-link"><i class="iconfont reco-tag"></i>
+  Tag
+</a></div><div class="nav-item"><a href="/timeline/" class="nav-link"><i class="iconfont reco-date"></i>
+  TimeLine
+</a></div><div class="nav-item"><div class="dropdown-wrapper"><a class="dropdown-title"><span class="title"><i class="iconfont reco-message"></i>
+      Contact
+    </span> <span class="arrow right"></span></a> <ul class="nav-dropdown" style="display:none;"><li class="dropdown-item"><!----> <a href="https://github.com/junk1024" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-github"></i>
+  GitHub
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li><li class="dropdown-item"><!----> <a href="https://me.csdn.net/blog/Jeason666666" target="_blank" rel="noopener noreferrer" class="nav-link external"><i class="iconfont reco-csdn"></i>
+  CSDN
+  <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a></li></ul></div></div> <!----></nav> <!----> </aside> <div class="password-shadow password-wrapper-in" style="display:none;" data-v-59e6cb88 data-v-7dd95ae2><h3 class="title" data-v-59e6cb88>面试题JS(一)</h3> <!----> <label id="box" class="inputBox" data-v-59e6cb88><input type="password" value="" data-v-59e6cb88> <span data-v-59e6cb88>Konck! Knock!</span> <button data-v-59e6cb88>OK</button></label> <div class="footer" data-v-59e6cb88><span data-v-59e6cb88><i class="iconfont reco-theme" data-v-59e6cb88></i> <a target="blank" href="https://vuepress-theme-reco.recoluan.com" data-v-59e6cb88>vuePress-theme-reco</a></span> <span data-v-59e6cb88><i class="iconfont reco-copyright" data-v-59e6cb88></i> <a data-v-59e6cb88><span data-v-59e6cb88>wy</span>
+          
+        <span data-v-59e6cb88>2022 - </span>
+        2023
+      </a></span></div></div> <div data-v-7dd95ae2><div data-v-7dd95ae2><main class="page"><section style="display:;"><div class="page-title"><h1 class="title">面试题JS(一)</h1> <div data-v-8a445198><i class="iconfont reco-account" data-v-8a445198><span data-v-8a445198>wy</span></i> <i class="iconfont reco-date" data-v-8a445198><span data-v-8a445198>2/19/2023</span></i> <i class="iconfont reco-eye" data-v-8a445198><span id="/interview-github-pages.html" data-flag-title="Your Article Title" class="leancloud-visitors" data-v-8a445198><a class="leancloud-visitors-count" style="font-size:.9rem;font-weight:normal;color:#999;"></a></span></i> <i class="tags iconfont reco-tag" data-v-8a445198><span class="tag-item" data-v-8a445198>博客</span></i></div></div> <div class="theme-reco-content content__default"><h2 id="数据类型"><a href="#数据类型" class="header-anchor">#</a> 数据类型</h2> <ol><li>基本数据类型：七种 Boolean Number String undefined null Bigint Symbol。Symbol ： ES6 引入的一种新的原始值，表示独一无二的值，主要为了解决属性名冲突问题。 Bigint ：ES2020 新增加，是比 Number 类型的整数范围更大。</li> <li>引用数据类型：Object 对象(包括普通 Object、Function、Array、Date、RegExp、Math)</li></ol> <h2 id="判断数据类型的方法"><a href="#判断数据类型的方法" class="header-anchor">#</a> 判断数据类型的方法</h2> <h3 id="typeof-能够快速区分基本数据类型-不能正确区分-object、array、null-都返回-object。"><a href="#typeof-能够快速区分基本数据类型-不能正确区分-object、array、null-都返回-object。" class="header-anchor">#</a> typeof：能够快速区分基本数据类型，不能正确区分 object、array、null，都返回 object。</h3> <ol><li>作用：区分数据类型，返回值为 number、string、boolean、undefined、object、function、symbol、bigint</li> <li>不能正确区分数据类型。对于基本数据类型 null 会返回 object；引用类型除 function 都返回 object</li> <li>注意事项</li></ol> <ul><li>typeof 返回值为 string 格式</li> <li>对于未定义的变量不会报错，返回 undefined</li> <li>typeof(null)结果为 object</li> <li>typeof(NaN)结果为 number</li></ul> <h3 id="instanceof-能够区分-array、object-和-function-是用于判断自定义的类实例对象-但是不能判断基本数据类型"><a href="#instanceof-能够区分-array、object-和-function-是用于判断自定义的类实例对象-但是不能判断基本数据类型" class="header-anchor">#</a> instanceof：能够区分 array、object 和 function，是用于判断自定义的类实例对象，但是不能判断基本数据类型</h3> <ol><li>instanceof 判断对象的原型链上是否存在构造函数的原型。只能判断引用类型</li> <li>instanceof 常用来判断 A 是否为 B 的实例</li></ol> <h3 id="object-prototype-tostring-call-精确判断数据类型-但是写法相对繁琐"><a href="#object-prototype-tostring-call-精确判断数据类型-但是写法相对繁琐" class="header-anchor">#</a> Object.prototype.toString.call():精确判断数据类型，但是写法相对繁琐</h3> <div class="language- line-numbers-mode"><pre class="language-text"><code>toString.call(()=&gt;{})       // [object Function]
+toString.call({})           // [object Object]
+toString.call([])           // [object Array]
+toString.call('')           // [object String]
+toString.call(22)           // [object Number]
+toString.call(undefined)    // [object undefined]
+toString.call(null)         // [object null]
+toString.call(new Date)     // [object Date]
+toString.call(Math)         // [object Math]
+toString.call(window)       // [object Window]
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br></div></div><h2 id="typeof-abc-和-typeof-abc-都是返回-string-那么-typeof-是操作符还是函数"><a href="#typeof-abc-和-typeof-abc-都是返回-string-那么-typeof-是操作符还是函数" class="header-anchor">#</a> typeof('abc')和 typeof'abc'都是返回 String，那么 typeof 是操作符还是函数？</h2> <p>学习过程中知道 typeof 是操作符，但是 typeof('abc')这种形式是函数调用，那么他到底是不是函数呢？typeof 的返回值之一有 function，那么就可以使用 typeof(typeof)来检测是否为函数，若为函数则返回 function，但是这串代码会报错，也就说明 typeof 不是函数。括号的作用是分组而非函数调用。</p> <h2 id="instanceof-模拟实现"><a href="#instanceof-模拟实现" class="header-anchor">#</a> instanceof 模拟实现</h2> <p>instanceof 用来判断对象的原型链上是否存在构造函数的原型，只能判断引用类型，常用来判断 A 是否为 B 的实例。
+模拟实现思想：沿着原型链上向上查找</p> <div class="language- line-numbers-mode"><pre class="language-text"><code>function instance_of(Case, Constructor) {
+    // 基本数据类型返回false
+    // 兼容一下函数对象
+    if ((typeof(Case) != 'object' &amp;&amp; typeof(Case) != 'function') || Case == 'null') return false;
+    let CaseProto = Object.getPrototypeOf(Case);
+    while (true) {
+        // 查到原型链顶端，仍未查到，返回false
+        if (CaseProto == null) return false;
+        // 找到相同的原型
+        if (CaseProto === Constructor.prototype) return true;
+        CaseProto = Object.getPrototypeOf(CaseProto);
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br><span class="line-number">13</span><br></div></div><h2 id="typeof-和-instanceof-的区别"><a href="#typeof-和-instanceof-的区别" class="header-anchor">#</a> typeof 和 instanceof 的区别</h2> <p>两者都是判断数据类型的方法，区别如下：</p> <ul><li>typeof 会返回一个变量的基本类型(number、string、boolean、undefined、object、function、symbol、bigint),instanceof 返回的是布尔值</li> <li>instanceof 可以准确判断引用类型数据，但不能判断基本数据类型，typeof 判断除 null 外基本数据，但不能判断引用类型，除 function 外都返回 object</li></ul> <h2 id="判断数组的方法"><a href="#判断数组的方法" class="header-anchor">#</a> 判断数组的方法</h2> <ol><li>Array.isArray()</li> <li>当 isArray 不存在时使用 Object.prototype.toString.call()</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>if (!Array.isArray) {
+    Array.isArray = function(o) {
+        return typeof(o) === 'object'
+               &amp;&amp; Object.prototype.toString.call(o) === '[object Array]';
+    }
+}
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br></div></div><ol start="3"><li>instanceof 不建议使用，问题在于，如果网页中存在多个 iframe ，那便会存在多个 Array 构造函数，此时判断是否是数组会存在问题。</li></ol> <h2 id="判断对象是否具有某个属性的方法"><a href="#判断对象是否具有某个属性的方法" class="header-anchor">#</a> 判断对象是否具有某个属性的方法</h2> <ol><li>in 关键字。如果指定属性在指定对象或其原型链中，返回 true(和 Reflect.has(obj,'name')方法一样)</li> <li>hasOwnProperty()。指示对象是否具有指定属性作为她自己的属性(而不是继承他)，该方法可以正确区分对象的本身属性和来自其原型的属性。但是该方法对于使用 Object.create(null)创建的对象不适用。</li> <li>Object.prototype.hasOwnProperty()。该方法直接调用内置的有效函数，跳过原型链，可解决上一个问题。</li> <li>Object.hasOwn()。如果指定对象具有指定属性作为自己的属性，则返回 true，如果属性不存在或者被继承，则返回 false。</li> <li>propertyIsEnumerable()。propertyIsEnumerable() 是 hasOwnProperty() 的增强版，这个方法的用法与 hasOwnProperty()相同，但当检测属性是自有属性(非继承)且这个属性是可枚举的，才会返回 true。</li></ol> <h2 id="数组的-splice-和-slice-有什么用和区别"><a href="#数组的-splice-和-slice-有什么用和区别" class="header-anchor">#</a> 数组的 splice 和 slice 有什么用和区别</h2> <ul><li>slice：截取功能,该方法不会改变本身的数组，而是将提取元素封装到新的数组返回。arr.slice(a,b),截取开始的索引，包含开始索引截取结束的索引，不包含结束索引第二个参数可以省略不写，此时会截取从开始索引往后的所有元素注意索引可以为一个赋值 数组可以从-1 开始 从后往前计算 -1 倒数第一个 -2 倒数第二个。</li> <li>splice()：数组增删查改，使用 splice()会影响到原数组，并将删除的元素作为返回值返回。splice()方法不仅能删除元素 还可以在删除元素的基础上添加新的元素需要注意的是：splice(a,b,c) a 是开始位置的索引 b 是删除的数量 c 及以后可以任意添加元素</li></ul> <h2 id="和-有什么区别"><a href="#和-有什么区别" class="header-anchor">#</a> ==和===有什么区别</h2> <ul><li><p>=== 是严格相等，要求数据类型和值都要相等；== 只需要值相等。</p></li> <li><p>== 会发生隐式类型转换，=== 不会发生隐式类型转换。</p></li> <li><p>==和===一些比较规则</p> <ol><li>NaN == NaN false NaN 和任何数都不相等，包括 NaN 本身 。 [] == [] false {} == {} false 引用数据类型比较的是地址。</li> <li>undefined == null true 但是 undefined === null false (因为数据类型不一样)。</li> <li>对象 == 字符串 将对象转换成字符串</li> <li>==比较时如果两边数据类型不一样，都需要转换成数字类型。=== 比较的二者数据类型不一样时，直接返回 false。</li></ol></li></ul> <h2 id="普通函数和构造函数的区别"><a href="#普通函数和构造函数的区别" class="header-anchor">#</a> 普通函数和构造函数的区别</h2> <ol><li>函数调用方式不一样</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>//构造函数也是一个普通函数，创建方式和普通函数一样。
+function Foo(){}
+Foo();//普通函数调用方式
+var f = new Foo();//构造函数调用方式,需要使用new关键字
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br></div></div><ol start="2"><li>作用不一样，构造函数用来创建实例化对象</li> <li>首字母大小写习惯</li></ol> <ul><li>普通函数一般小写</li> <li>构造函数一般大写</li></ul> <ol start="4"><li>函数中的 this 指向不同</li></ol> <ul><li>普通函数中的 this 在严格模式下指向 undefined，非严格模式下指向 windows 对象</li> <li>构造函数中的 this 指向他创建的对象实例</li></ul> <ol start="5"><li>写法不同</li></ol> <div class="language- line-numbers-mode"><pre class="language-text"><code>//构造函数
+function Person(name){
+	this.name = name;
+}
+var p = new Person('John');//使用new关键字，不使用return
+//普通函数
+function person(name){
+	this.name = name;
+	return this;//使用return
+}
+var p = person('john'),
+
+</code></pre> <div class="line-numbers-wrapper"><span class="line-number">1</span><br><span class="line-number">2</span><br><span class="line-number">3</span><br><span class="line-number">4</span><br><span class="line-number">5</span><br><span class="line-number">6</span><br><span class="line-number">7</span><br><span class="line-number">8</span><br><span class="line-number">9</span><br><span class="line-number">10</span><br><span class="line-number">11</span><br><span class="line-number">12</span><br></div></div><h2 id="类数组和数组的区别-为什么要设置类数组-怎么将类数组转为数组"><a href="#类数组和数组的区别-为什么要设置类数组-怎么将类数组转为数组" class="header-anchor">#</a> 类数组和数组的区别，为什么要设置类数组，怎么将类数组转为数组</h2> <ol><li>区别</li></ol> <ul><li>类数组具有 length 属性和索引元素，但是没有 Array 属性和方法</li> <li>类数组是一个普通对象，数组的类型是 Array</li></ul> <ol start="2"><li>类数组对象的设计目的更多是只让你遍历和访问下标,而不是去添加或删除元素</li> <li>将类数组转为数组的方法</li></ol> <ul><li>Array.from():const args = Array.from(arguments);</li> <li>拓展运算符: const args = [...arguments];</li> <li>const args = [].slice.call(arguments);</li> <li>Array.prototype.slice.call:const args = Array.prototype.slice.call(arguments);</li> <li>Array.prototype.splice.call:const args = Array.prototype.splice.call(arguments, 0);</li> <li>Array.prototype.concat.apply: const args = Array.prototype.concat.apply([], arguments);</li></ul> <h2 id="null-和-undefined-的区别"><a href="#null-和-undefined-的区别" class="header-anchor">#</a> null 和 undefined 的区别</h2> <ul><li>null 表示一个无的对象；而 undefined 表示未定义</li> <li>再转换为数字结果时，null 转为 0，而 undefined 转换为 NaN
+使用场景：</li></ul> <ol><li>null 作为对象原型链的终点；作为函数的参数时，表示该函数的参数不是对象</li> <li>变量声明未赋值等于 undefined；调用函数未提供参数值该参数等于 undefined；对象没有赋值时，该属性值为 undefined；函数没有返回值时，返回 undefined</li></ol> <h2 id="this-指向"><a href="#this-指向" class="header-anchor">#</a> this 指向</h2> <ul><li>默认绑定：非严格模式下，this 指向全局对象 windows，严格模式下指向 undefined</li> <li>隐式绑定： 满足 XX.fn()格式，fn 的 this 指向 XX。如果存在链式调用，this 永远指向最后调用他的那个对象。隐式绑定丢失：起函数别名，通过别名运行；函数作为参数会造成隐式绑定丢失</li> <li>显示绑定： 通过 call/apply/bind 修改 this 指向</li> <li>new 绑定：通过 new 来调用构造函数，会生成一个新对象，并且把这个新对象绑定为调用函数的 this</li> <li>箭头函数绑定： 箭头函数没有 this，它的 this 是通过作用域链查到外层作用域的 this，且指向函数定义时的 this</li></ul> <h2 id="隐藏页面布局元素的方法"><a href="#隐藏页面布局元素的方法" class="header-anchor">#</a> 隐藏页面布局元素的方法</h2> <ol><li>opacity：0，该元素隐藏起来了，但不会改变页面布局，并且，如果该元素已经绑定 一些事件，如 click 事件，那么点击该区域，也能触发点击事件的</li> <li>visibility：hidden，该元素隐藏起来了，但不会改变页面布局，但是不会触发该元素已 经绑定的事件 ，隐藏对应元素，在文档布局中仍保留原来的空间（重绘）</li> <li>display：none，把元素隐藏起来，并且会改变页面布局，可以理解成在页面中把该元素。 不显示对应的元素，在文档布局中不再分配空间（回流+重绘）</li></ol></div></section> <footer class="page-edit"><!----> <div class="last-updated"><span class="prefix">上次更新: </span> <span class="time">3/8/2023, 11:19:02 AM</span></div></footer> <!----> <div class="comments-wrapper"><!----></div></main></div> <!----></div> <ul class="sub-sidebar sub-sidebar-wrapper" style="width:12rem;" data-v-b57cc07c data-v-7dd95ae2><li class="level-2" data-v-b57cc07c><a href="/interview-github-pages.html#数据类型" class="sidebar-link reco-side-数据类型" data-v-b57cc07c>数据类型</a></li><li class="level-2" data-v-b57cc07c><a href="/interview-github-pages.html#判断数据类型的方法" class="sidebar-link reco-side-判断数据类型的方法" data-v-b57cc07c>判断数据类型的方法</a></li><li class="level-3" data-v-b57cc07c><a href="/interview-github-pages.html#typeof-能够快速区分基本数据类型-不能正确区分-object、array、null-都返回-object。" class="sidebar-link reco-side-typeof-能够快速区分基本数据类型-不能正确区分-object、array、null-都返回-object。" data-v-b57cc07c>typeof：能够快速区分基本数据类型，不能正确区分 object、array、null，都返回 object。</a></li><li class="level-3" data-v-b57cc07c><a href="/interview-github-pages.html#instanceof-能够区分-array、object-和-function-是用于判断自定义的类实例对象-但是不能判断基本数据类型" class="sidebar-link reco-side-instanceof-能够区分-array、object-和-function-是用于判断自定义的类实例对象-但是不能判断基本数据类型" data-v-b57cc07c>instanceof：能够区分 array、object 和 function，是用于判断自定义的类实例对象，但是不能判断基本数据类型</a></li><li class="level-3" data-v-b57cc07c><a href="/interview-github-pages.html#object-prototype-tostring-call-精确判断数据类型-但是写法相对繁琐" class="sidebar-link reco-side-object-prototype-tostring-call-精确判断数据类型-但是写法相对繁琐" data-v-b57cc07c>Object.prototype.toString.call():精确判断数据类型，但是写法相对繁琐</a></li><li class="level-2" data-v-b57cc07c><a href="/interview-github-pages.html#typeof-abc-和-typeof-abc-都是返回-string-那么-typeof-是操作符还是函数" class="sidebar-link reco-side-typeof-abc-和-typeof-abc-都是返回-string-那么-typeof-是操作符还是函数" data-v-b57cc07c>typeof('abc')和 typeof'abc'都是返回 String，那么 typeof 是操作符还是函数？</a></li><li class="level-2" data-v-b57cc07c><a href="/interview-github-pages.html#instanceof-模拟实现" class="sidebar-link reco-side-instanceof-模拟实现" data-v-b57cc07c>instanceof 模拟实现</a></li><li class="level-2" data-v-b57cc07c><a href="/interview-github-pages.html#typeof-和-instanceof-的区别" class="sidebar-link reco-side-typeof-和-instanceof-的区别" data-v-b57cc07c>typeof 和 instanceof 的区别</a></li><li class="level-2" data-v-b57cc07c><a href="/interview-github-pages.html#判断数组的方法" class="sidebar-link reco-side-判断数组的方法" data-v-b57cc07c>判断数组的方法</a></li><li class="level-2" data-v-b57cc07c><a href="/interview-github-pages.html#判断对象是否具有某个属性的方法" class="sidebar-link reco-side-判断对象是否具有某个属性的方法" data-v-b57cc07c>判断对象是否具有某个属性的方法</a></li><li class="level-2" data-v-b57cc07c><a href="/interview-github-pages.html#数组的-splice-和-slice-有什么用和区别" class="sidebar-link reco-side-数组的-splice-和-slice-有什么用和区别" data-v-b57cc07c>数组的 splice 和 slice 有什么用和区别</a></li><li class="level-2" data-v-b57cc07c><a href="/interview-github-pages.html#和-有什么区别" class="sidebar-link reco-side-和-有什么区别" data-v-b57cc07c>==和===有什么区别</a></li><li class="level-2" data-v-b57cc07c><a href="/interview-github-pages.html#普通函数和构造函数的区别" class="sidebar-link reco-side-普通函数和构造函数的区别" data-v-b57cc07c>普通函数和构造函数的区别</a></li><li class="level-2" data-v-b57cc07c><a href="/interview-github-pages.html#类数组和数组的区别-为什么要设置类数组-怎么将类数组转为数组" class="sidebar-link reco-side-类数组和数组的区别-为什么要设置类数组-怎么将类数组转为数组" data-v-b57cc07c>类数组和数组的区别，为什么要设置类数组，怎么将类数组转为数组</a></li><li class="level-2" data-v-b57cc07c><a href="/interview-github-pages.html#null-和-undefined-的区别" class="sidebar-link reco-side-null-和-undefined-的区别" data-v-b57cc07c>null 和 undefined 的区别</a></li><li class="level-2" data-v-b57cc07c><a href="/interview-github-pages.html#this-指向" class="sidebar-link reco-side-this-指向" data-v-b57cc07c>this 指向</a></li><li class="level-2" data-v-b57cc07c><a href="/interview-github-pages.html#隐藏页面布局元素的方法" class="sidebar-link reco-side-隐藏页面布局元素的方法" data-v-b57cc07c>隐藏页面布局元素的方法</a></li></ul></div></div></div><div class="global-ui"><div class="back-to-ceiling" style="right:1rem;bottom:6rem;width:2.5rem;height:2.5rem;border-radius:.25rem;line-height:2.5rem;display:none;" data-v-c6073ba8 data-v-c6073ba8><svg t="1574745035067" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="5404" class="icon" data-v-c6073ba8><path d="M526.60727968 10.90185116a27.675 27.675 0 0 0-29.21455937 0c-131.36607665 82.28402758-218.69155461 228.01873535-218.69155402 394.07834331a462.20625001 462.20625001 0 0 0 5.36959153 69.94390903c1.00431239 6.55289093-0.34802892 13.13561351-3.76865779 18.80351572-32.63518765 54.11355614-51.75690182 118.55860487-51.7569018 187.94566865a371.06718723 371.06718723 0 0 0 11.50484808 91.98906777c6.53300375 25.50556257 41.68394495 28.14064038 52.69160883 4.22606766 17.37162448-37.73630017 42.14135425-72.50938081 72.80769204-103.21549295 2.18761121 3.04276886 4.15646224 6.24463696 6.40373557 9.22774369a1871.4375 1871.4375 0 0 0 140.04691725 5.34970492 1866.36093723 1866.36093723 0 0 0 140.04691723-5.34970492c2.24727335-2.98310674 4.21612437-6.18497483 6.3937923-9.2178004 30.66633723 30.70611158 55.4360664 65.4791928 72.80769147 103.21549355 11.00766384 23.91457269 46.15860503 21.27949489 52.69160879-4.22606768a371.15156223 371.15156223 0 0 0 11.514792-91.99901164c0-69.36717486-19.13165746-133.82216804-51.75690182-187.92578088-3.42062944-5.66790279-4.76302748-12.26056868-3.76865837-18.80351632a462.20625001 462.20625001 0 0 0 5.36959269-69.943909c-0.00994388-166.08943902-87.32547796-311.81420293-218.6915546-394.09823051zM605.93803103 357.87693858a93.93749974 93.93749974 0 1 1-187.89594924 6.1e-7 93.93749974 93.93749974 0 0 1 187.89594924-6.1e-7z" p-id="5405" data-v-c6073ba8></path><path d="M429.50777625 765.63860547C429.50777625 803.39355007 466.44236686 1000.39046097 512.00932183 1000.39046097c45.56695499 0 82.4922232-197.00623328 82.5015456-234.7518555 0-37.75494459-36.9345906-68.35043303-82.4922232-68.34111062-45.57627738-0.00932239-82.52019037 30.59548842-82.51086798 68.34111062z" p-id="5406" data-v-c6073ba8></path></svg></div><!----></div></div>
+    <script src="/assets/js/app.15f16927.js" defer></script><script src="/assets/js/3.d8cb7a9a.js" defer></script><script src="/assets/js/1.ad76be21.js" defer></script><script src="/assets/js/15.a1509fdc.js" defer></script><script src="/assets/js/9.c6a63828.js" defer></script>
+  </body>
+</html>
